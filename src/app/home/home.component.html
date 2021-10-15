@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>New Movies</h2>
+    <movies-list [movies]="Newmovies"></movies-list>
+    
+    <h2>UP Comming Movies</h2>
+    <movies-list [movies]="Upmovies"></movies-list>
+    
+    <input type="file" #upload style="display: none;">
+    <button (click)="upload.click()">Upluad file</button>
+  </div>

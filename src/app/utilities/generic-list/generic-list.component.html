@@ -1,0 +1,20 @@
+<div *ngIf="!list">
+<span #landing>
+    <ng-content select="[landing]"></ng-content>
+</span>
+<span *ngIf="!landing.innerHTML.trim()">
+    <img  src="https://www.rinox.com/wp-content/themes/rinox/assets/images/loader.gif" alt="">
+</span>    
+</div>
+<div *ngIf="list?.length === 0 ">
+    <span #vide>
+        <ng-content select="[vide]"></ng-content>
+    </span>
+    <span *ngIf="!vide.innerHTML.trim()">
+        There is no record to display
+    </span>
+</div>
+<ng-container *ngIf="list && list.length > 0">
+<ng-content (select)="[content]"></ng-content>
+</ng-container>
+
