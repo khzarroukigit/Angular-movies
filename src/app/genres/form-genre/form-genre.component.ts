@@ -26,6 +26,7 @@ export class FormGenreComponent implements OnInit {
     });
     if(this.model !== undefined)
     this.form.patchValue(this.model);
+    
   }
   save(){
     this.onSave.emit(this.form.value);
